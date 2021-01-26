@@ -212,11 +212,12 @@
         <appender-ref ref="LOG_STASH_ERROR"/>
     </root>
 
-    <logger name="com.yy.system.log.WebLogAspect" level="DEBUG">
+    <!-- 接口访问日志 -->
+    <logger name="com.yy.common.log.WebLogAspect" level="DEBUG">
         <appender-ref ref="LOG_STASH_RECORD"/>
     </logger>
-
-    <logger name="com.yy.system" level="DEBUG">
+    <!-- 业务日志 -->
+    <logger name="com.yy" level="DEBUG">
         <appender-ref ref="LOG_STASH_BUSINESS"/>
     </logger>
 </configuration>

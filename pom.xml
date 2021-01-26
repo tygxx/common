@@ -22,13 +22,19 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- 分页插件版本 -->
         <pagehelper.version>5.1.8</pagehelper.version>
+        <!-- lombok（get、set用） -->
         <lombok.version>1.16.16</lombok.version>
+        <!-- 常用工具类 -->
         <hutool.version>4.5.7</hutool.version>
         <!-- API文档生产工具，比swagger好用 -->
         <knife4j.version>2.0.4</knife4j.version>
         <!-- 统一日志收集用 -->
         <logstash-logback.version>5.3</logstash-logback.version>
+        <!-- redis版本 -->
         <spring-boot-redis.version>2.2.1.RELEASE</spring-boot-redis.version>
+        <!-- 可以用注解校验请求参数,需要以下两个依赖才能好使，如：@NotEmpty、@Email -->
+        <jakarta.validation.version>2.0.2</jakarta.validation.version>
+        <hibernate-validator.version>6.0.13.Final</hibernate-validator.version>
     </properties>
 
     <dependencyManagement>
@@ -71,6 +77,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+        <!-- Feign使用Okhttp -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-okhttp</artifactId>
+        </dependency>
         <!--MyBatis分页插件-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
@@ -110,6 +121,17 @@
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-boot-starter</artifactId>
             <version>${knife4j.version}</version>
+        </dependency>
+        <!-- 请求参数校验，需要以下两个依赖才能好使 -->
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>${jakarta.validation.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
         </dependency>
     </dependencies>
     <build>

@@ -1,9 +1,10 @@
 package com.yy.common.constant;
 
-/**
- * 权限相关常量定义
- * Created by macro on 2020/6/19.
- */
+/*
+ *@Description: 权限相关常量定义
+ *@ClassAuthor: tengYong
+ *@Date: 2021-01-26 13:38:43
+*/
 public interface AuthConstant {
 
     /**
