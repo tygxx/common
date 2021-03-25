@@ -32,6 +32,8 @@
             <maxFileSize>${LOG_FILE_MAX_SIZE:-10MB}</maxFileSize>
             <!--日志文件保留天数，默认5天-->
             <maxHistory>${LOG_FILE_MAX_HISTORY:-5}</maxHistory>
+            <!-- 自动清理过期日志 -->
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
         </rollingPolicy>
     </appender>
 
@@ -56,6 +58,8 @@
             <maxFileSize>${LOG_FILE_MAX_SIZE:-10MB}</maxFileSize>
             <!--日志文件保留天数，默认5天-->
             <maxHistory>${LOG_FILE_MAX_HISTORY:-5}</maxHistory>
+            <!-- 自动清理过期日志 -->
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
         </rollingPolicy>
     </appender>
 
@@ -204,6 +208,7 @@
     <logger name="org.hibernate.validator" level="INFO"/>
     <logger name="com.alibaba.nacos.client.naming" level="INFO"/>
 
+    <!-- 常用日志级别：tarce、debug、info、warn、error -->
     <root level="DEBUG">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE_DEBUG"/>
